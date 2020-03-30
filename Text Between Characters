@@ -1,0 +1,7 @@
+Find text between text or characters
+e.g.
+
+Text between %_of and at
+
+(?<=% of )(.*)(?= at) 
+
