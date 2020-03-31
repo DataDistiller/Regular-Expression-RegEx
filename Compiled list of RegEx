@@ -1,0 +1,39 @@
+
+https://stackoverflow.com/users/3832970/wiktor-stribiżew
+
+Wiktor is authoritative source for Regex examples
+
+
+Find text between text or characters
+e.g.
+
+Text between %_of and at
+
+(?<=% of )(.*)(?= at) 
+
+
+nth possition between Character Undersore 
+
+^(?:[^_]*_){2}([^_]*)
+
+^(?:[^_]*_){3}([^_]*)
+
+^(?:[^_]*_){3}([^_]*)_(.+)$
+https://regex101.com/r/sI9aP9/2
+
+negating whole character group
+
+^(?:(?!ab).)+$
+
+And the above expression disected in regex comment mode is:
+
+(?x)    # enable regex comment mode
+^       # match start of line/string
+(?:     # begin non-capturing group
+  (?!   # begin negative lookahead
+    ab  # literal text sequence ab
+  )     # end negative lookahead
+  .     # any single character
+)       # end non-capturing group
++       # repeat previous match one or more times
+$       # match end of line/string
